@@ -35,8 +35,7 @@ describe('Posts basic tests', () => {
     });
 
     it('should render all posts received', () => {
-        const wrapper = setup();
-        wrapper.setState(initialState);
+        const wrapper = setup(initialState);
         const postContent = findByDataTest(wrapper, "post-content");
         expect(postContent.length).toBe(initialState.posts.length);
     });
